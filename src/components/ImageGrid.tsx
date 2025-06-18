@@ -1,33 +1,23 @@
 
 import ImageCard from './ImageCard';
 
-const imageMap: Record<string, { src: string; alt: string }[]> = {
-  '500px': [
-    {
-      src: '/images/500px-images/blue-eyed-woman.jpg',
-      alt: 'Blue eyed beautiful woman in pink flowers',
-    },
-    // Add more images
-  ],
-  beauty: [],
-  flora: [],
-  fauna: [],
-  travel: [],
-  settings: [],
-};
+const allImages = import.meta.glob('../assets/gallery/*.jpg', {
+  eager: true,
+  import: 'default',
+});
 
 export default function ImageGrid({ category }: { category: string }) {
-  const images = imageMap[category] || [];
+  // Filter by category prefix
+  const images = Object.entries(allImages).filter(([path]) =>
+    path.includes(category)
+  );
 
   return (
     <div className="d-flex flex-wrap justify-content-center gap-4">
-      {images.length === 0 ? (
-        <p>No images in this category yet.</p>
-      ) : (
-        images.map((img, index) => (
-          <ImageCard key={index} src={img.src} alt={img.alt} />
-        ))
-      )}
+      {images.map(([_, src], index) => (
+        <ImageCard key={index} src={src as string} alt={category} />
+      ))}
     </div>
   );
 }
+
