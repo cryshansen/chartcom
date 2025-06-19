@@ -1,12 +1,24 @@
-import CurrentProjectsBlock from '../components/CurrentProjectsBlock' 
-import StudioCollabBlock from '../components/StudioCollabBlock' 
+
+import ProjectCollabBlock from '../components/ProjectCollabBlock' 
+import ProfileQuotesCarousel from '../components/ProfileQuotesCarousel' 
+import DevelopmentProjects from '../components/DevelopmentProjects' 
+import ProjectTabs from '../components/ProjectTabs' 
 
 
  const Projects = () => (
         <section className="fluid-container py-5 mb-5">
-            <h2 className="text-center mt-5">📘 projects</h2>
-            <CurrentProjectsBlock />
-            <StudioCollabBlock />
+            <div className="fluid-container my-5">
+                <div className="section_title_wrap">
+                    <h2 className="mb-5 text-center">Development Projects</h2>
+                </div>
+                <div className="row px-5">
+                    <DevelopmentProjects />
+                    <ProfileQuotesCarousel />
+                </div>
+
+            </div>
+            <ProjectTabs />
+            <ProjectCollabBlock />
 
         </section>
         );

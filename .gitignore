@@ -10,3 +10,6 @@ dist/
 
 # misc
 .DS_Store
+
+src/assets/gallery/**
+!src/assets/gallery/**/demo/**
