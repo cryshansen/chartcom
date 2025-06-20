@@ -1,134 +1,129 @@
 import React, { useState } from "react";
-import "./calendar.css"; // Optional if you have styles
-
-const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
-
-const months = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-
-const years = Array.from({ length: 21 }, (_, i) => new Date().getFullYear() - 10 + i);
+import "./calendar.css";
 
 export default function Calendar() {
-  // State for current month and year
-  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-
-  // We won't implement dropdown toggle because you requested no JS outside React
-  // So dropdowns will always be visible, or you can remove them if you want.
-
-  // Calculate days in month and first day
-  const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
-  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-  // Create blank days for padding before first day of month
-  const blanks = [];
-  for (let i = 0; i < firstDayOfMonth; i++) {
-    blanks.push(<div key={`blank-${i}`} className="day empty" />);
-  }
-
-
-
   const today = new Date();
-  // Create days of the month
-  const days = [];
-  for (let d = 1; d <= daysInMonth; d++) {
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+  const [currentYear, setCurrentYear] = useState(today.getFullYear());
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<string>("");
+
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  const daysInMonth = (month: number, year: number) =>
+    new Date(year, month + 1, 0).getDate();
+
+  const handleDayClick = (day: number) => {
+    const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    setSelectedDate(dateStr);
+    setModalVisible(true);
+  };
+
+  const renderCalendarDays = () => {
+    const totalDays = daysInMonth(currentMonth, currentYear);
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+
+    const days = [];
+
+    // Empty slots before the first day
+    for (let i = 0; i < firstDay; i++) {
+      days.push(<div key={`empty-${i}`} className="day empty" />);
+    }
+
+    for (let d = 1; d <= totalDays; d++) {
+      const dayDate = new Date(currentYear, currentMonth, d);
+      const isPast = dayDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
       const isToday =
-    d === today.getDate() &&
-    currentMonth === today.getMonth() &&
-    currentYear === today.getFullYear();
+        d === today.getDate() &&
+        currentMonth === today.getMonth() &&
+        currentYear === today.getFullYear();
 
-  let className = "day";
-  if (isToday) className += " today";
+      let className = "day";
+      if (isPast) className += " disabled";
+      else className += " clickable";
+      if (isToday) className += " today";
 
-    days.push(
-      <div key={d} className={className}>
-        {d}
-      </div>
-    );
-  }
+      days.push(
+        <div
+          key={d}
+          className={className}
+          onClick={!isPast ? () => handleDayClick(d) : undefined}
+          aria-disabled={isPast}
+        >
+          {d}
+        </div>
+      );
+    }
+    return days;
+  };
 
   return (
     <>
-    
-
       <div className="calendar" id="calendar">
-        <div
-          className="calendar-btn btn-primary month-btn"
-          // You can add onClick here later for toggling dropdown
-        >
-          <span id="curMonth">{months[currentMonth]}</span>
-          <div id="months" className="months dropdown">
-            {months.map((m, i) => (
-              <div
-                key={m}
-                onClick={() => setCurrentMonth(i)}
-                style={{ padding: "2px 5px", cursor: "pointer" }}
-              >
-                {m}
-              </div>
-            ))}
+        <div className="calendar-header d-flex align-items-center justify-content-between">
+          <div className="calendar-btn btn btn-primary month-btn">
+            <span>{months[currentMonth]}</span>
+          </div>
+          <div className="calendar-btn btn btn-primary year-btn">
+            <span>{currentYear}</span>
           </div>
         </div>
 
-        <i className="fa fa-calendar fa-3x mr-3 turquois" aria-hidden="true" />
-
-        <div
-          className="calendar-btn btn-primary year-btn"
-          // You can add onClick here later for toggling dropdown
-        >
-          <span id="curYear">{currentYear}</span>
-          <div id="years" className="years dropdown">
-            {years.map((y) => (
-              <div
-                key={y}
-                onClick={() => setCurrentYear(y)}
-                style={{ padding: "2px 5px", cursor: "pointer" }}
-              >
-                {y}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="clear"></div>
-
-        <div className="calendar-dates">
+        <div className="calendar-dates mt-3">
           <div className="days">
-            {daysOfWeek.map((day) => (
-              <div key={day} className="day label">
-                {day}
-              </div>
+            {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
+              <div key={day} className="day label">{day}</div>
             ))}
-
-            <div className="clear"></div>
           </div>
 
           <div id="calendarDays" className="days">
-            {blanks}
-            {days}
+            {renderCalendarDays()}
           </div>
         </div>
       </div>
       <div className="clearfix"></div>
-      <div id="container">
-        <div id="alertbox2" className="d-none">
-          <p id="msg">
-            Great to see you're exploring! Our booking system will be coming very soon! Are you
-            interested in booking on bookdate? Give me a call for now at: 819-213-5681
-          </p>
-          <input
-            id="btnClose2"
-            type="button"
-            value="OK"
-            onClick={() => {
-              const alertBox = document.getElementById("alertbox2");
-              if (alertBox) alertBox.classList.add("hide");
-            }}
-          />
+      {/* Bootstrap 5 Modal */}
+      {modalVisible && (
+        <div
+          className="modal fade show"
+          style={{ display: "block", backgroundColor: "rgba(0,0,0,0.5)" }}
+          tabIndex={-1}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Great to see you're exploring!</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  aria-label="Close"
+                  onClick={() => setModalVisible(false)}
+                />
+              </div>
+              <div className="modal-body">
+                <p>Our on-line booking system will be coming very soon! </p>
+                <p className="text-muted">You chose: <strong>{selectedDate}</strong><br />
+                  No worries, please call us at: <strong>123-456-7891</strong>
+                </p>
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={() => setModalVisible(false)}
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
