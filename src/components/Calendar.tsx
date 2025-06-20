@@ -59,7 +59,16 @@ export default function Calendar() {
     }
     return days;
   };
-
+  /** handle the existing contactModal to send a form request instead of a phone call. */
+const openBootstrapModal = (modalId: string) => {
+  const modalEl = document.getElementById(modalId);
+  if (modalEl) {
+    const modal = new (window as any).bootstrap.Modal(modalEl);
+    modal.show();
+  } else {
+    console.error("Modal not found:", modalId);
+  }
+};
   return (
     <>
       <div className="calendar" id="calendar">
@@ -87,6 +96,7 @@ export default function Calendar() {
       <div className="clearfix"></div>
       {/* Bootstrap 5 Modal */}
       {modalVisible && (
+        
         <div
           className="modal fade show"
           style={{ display: "block", backgroundColor: "rgba(0,0,0,0.5)" }}
@@ -118,6 +128,21 @@ export default function Calendar() {
                   onClick={() => setModalVisible(false)}
                 >
                   OK
+                </button>
+                <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#contactModal"
+                      onClick={() => {
+                        // Close the current alert/modal manually (if needed)
+                        setModalVisible(false);
+
+                        // Open the real contact modal
+                        openBootstrapModal("contactModal");
+                      }}
+                     >
+                      Contact Us
                 </button>
               </div>
             </div>
