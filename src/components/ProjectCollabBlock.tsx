@@ -4,11 +4,11 @@ export default function ProjectCollabBlock () {
   const message = (document.getElementById("contact-message") as HTMLTextAreaElement)?.value;
 
   window.dispatchEvent(
-    new CustomEvent("prefillContactModal", {
-      detail: { email, message },
-    })
-  );
-};
+      new CustomEvent("prefillContactModal", {
+        detail: { email, message },
+      })
+    );
+  };
 
   return (
       <div className="container">
