@@ -2,7 +2,7 @@ import NewsletterFooterBlock from "./NewsletterFooterBlock"
 
 export default function Footer() {
   return (
-    <div className="container">
+    <div className="container footerContainer clearfix">
     <footer className="py-5">
     <div className="row">
         <div className="col-6 col-md-2 mb-3">

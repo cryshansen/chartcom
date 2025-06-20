@@ -1,4 +1,8 @@
-export default function  ArtfolioCollabBlock()  {
+//import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+export default function  ArtfolioCollabBlock()  { 
+
 
     return (
           <div className="container">
@@ -22,13 +26,14 @@ export default function  ArtfolioCollabBlock()  {
                   Currently offering space for collaborating on Glamour Shots, Glamour Portraits, Feel Good Session, or any Beauty session for 30% off regular mini session cost.
                 </p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <Link to="/calendar">
                   <button
                     id="calendar"
                     type="button"
                     className="btn btn-primary btn-lg px-4 me-md-2"
                   >
                     Check Dates
-                  </button>
+                  </button></Link>
                   <button
                     type="button"
                     className="btn btn-primary btn-center-align"

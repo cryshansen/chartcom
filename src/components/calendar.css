@@ -1,8 +1,10 @@
-body, *{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
+.calendarComponent {
+  display: block;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
 }
+
 .calendar
 {
     background-color: white;
@@ -93,7 +95,8 @@ body, *{
     background-color: white;
     border:none;
 }
-
+/* crystalhansenartographic uses today vs day.selected */
+.today,
 .calendar .calendar-dates .days .day.selected
 {
     background-color: #999999; /* #2e9083; */ /*#1caff6;*/
@@ -120,6 +123,17 @@ body, *{
 .clear{
     clear:both;
 }
+
+.day.disabled {
+  color: #999999;
+  cursor: not-allowed;
+  pointer-events: none; /* disables click */
+}
+
+.day.clickable {
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 960px) {
     .calendar{

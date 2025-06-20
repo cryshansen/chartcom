@@ -10,6 +10,7 @@ import Artelier from './pages/Artelier';
 import Artfolio from './pages/Artfolio';
 import About from './pages/About';
 import Apothecary from './pages/Apothecary';
+import Calendar from './pages/Calendar';
 import NotFound from './pages/NotFound';
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/creds" element={<Creds />} />
         <Route path="/about" element={<About />} />
         <Route path="/apothecary" element={<Apothecary />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ContactModal />
