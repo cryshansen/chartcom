@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { FaCalendar } from "react-icons/fa";
-import "./calendar.css"; // Optional if you have styles
+import React, { useState } from "react";
+import 
+
+const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
 
 const months = [
   "January", "February", "March", "April", "May", "June",
