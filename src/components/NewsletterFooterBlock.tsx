@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useCaptcha from "../hooks/useCaptcha";
 
-export default function NewsletterRemediesBlock() {
+export default function NewsletterFooterBlock() {
   const { captchaRef, captchaId } = useCaptcha();
 
   const [email, setEmail] = useState("");
@@ -60,37 +60,38 @@ export default function NewsletterRemediesBlock() {
   };
 
   return (
-    <section className="container py-5 my-5 bg-light  shadow">
-      <div className="text-center mb-5">
-        <h2 className="mb-3">🌿 Join Our Apothecary Remedies Newsletter</h2>
-        <p className="text-muted">
-          Get natural remedies, DIY recipes, and essential oil tips, wellness tips, botanical recipes, and product drops straight to your inbox.
-        </p>
-      </div>
+    <>
+   <form id="newsletter-form" role="form" onSubmit={handleSubmit}>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
 
-      <div className="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
-         <form onSubmit={handleSubmit} className="text-center">
-          <input
-            type="email"
-            className="form-control w-50 w-md-50"
-            placeholder="Your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-           {error && <p className="text-danger mt-2">{error}</p>}
-           <div ref={captchaRef} id="captcha3" className="d-flex justify-content-center mb-3" />
+                <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label htmlFor="newsemail" className="visually-hidden">Email address</label>
+                    <input
+                        id="newsemail"
+                        type="email"
+                        className="form-control"
+                        placeholder="Email address"
+                        required
+                        value={email} // <-- add this
+                        onChange={(e) => setEmail(e.target.value)} // <-- add this
+                        />
+                     {error && <p className="text-danger mt-2">{error}</p>}
+                  
 
-          <button className="btn btn-primary" type="submit">
-            Subscribe
-          </button>
-        </form>
-      </div>
-
-      {message && (
+                    <button id="subscribe" className="btn btn-primary" type="submit">
+                    Subscribe
+                    </button>
+                </div>
+                  <div ref={captchaRef} id="captcha2" className="d-flex justify-content-center mb-3" />
+            </form>
+ 
+        {message && (
         <p className="text-center mt-3 text-success fw-bold">
           {message}
         </p>
-      )}
-    </section>
+      )
+      }
+    </>
   );
 }

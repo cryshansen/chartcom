@@ -1,3 +1,5 @@
+import NewsletterFooterBlock from "./NewsletterFooterBlock"
+
 export default function Footer() {
   return (
     <div className="container">
@@ -37,30 +39,7 @@ export default function Footer() {
         </div>
 
         <div className="col-md-5 offset-md-1 mb-3">
-            <form id="newsletter-form" role="form" method="POST" action="">
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
-
-                <div id="smessage" style={{ color: 'green' }}></div>
-                <span className="error" id="smsg-error" style={{ color: 'red' }}></span>
-
-                <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                    <label htmlFor="newsemail" className="visually-hidden">Email address</label>
-                    <input
-                    id="newsemail"
-                    type="email"
-                    className="form-control"
-                    placeholder="Email address"
-                    required
-                    />
-                    <span className="error" id="smessage-error"></span>
-                    <button id="subscribe" className="btn btn-primary" type="button">
-                    Subscribe
-                    </button>
-                </div>
-
-                <div id="captcha3"></div>
-            </form>
+            <NewsletterFooterBlock />
         </div>
     </div>
 

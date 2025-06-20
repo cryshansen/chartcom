@@ -1,4 +1,16 @@
 export default function StudioCollabBlock () {
+
+  const handleOpenModal = () => {
+  const email = (document.getElementById("contact-email") as HTMLInputElement)?.value;
+  const message = (document.getElementById("contact-message") as HTMLTextAreaElement)?.value;
+
+  window.dispatchEvent(
+    new CustomEvent("prefillContactModal", {
+      detail: { email, message },
+    })
+  );
+};
+
   return (
       <div className="container">
         <div className="row align-items-center g-lg-5 py-5">
@@ -51,6 +63,7 @@ export default function StudioCollabBlock () {
                 data-bs-toggle="modal"
                 data-bs-target="#contactModal"
                 type="button"
+                onClick={handleOpenModal}
               >
                 Contact Us
               </button>

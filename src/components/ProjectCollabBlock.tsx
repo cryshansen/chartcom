@@ -1,4 +1,15 @@
 export default function ProjectCollabBlock () {
+  const handleOpenModal = () => {
+  const email = (document.getElementById("contact-email") as HTMLInputElement)?.value;
+  const message = (document.getElementById("contact-message") as HTMLTextAreaElement)?.value;
+
+  window.dispatchEvent(
+    new CustomEvent("prefillContactModal", {
+      detail: { email, message },
+    })
+  );
+};
+
   return (
       <div className="container">
         <div className="row align-items-center g-lg-5 py-5">
@@ -17,7 +28,7 @@ export default function ProjectCollabBlock () {
           <div className="col-md-10 mx-auto col-lg-5">
             <div id="cmessage"></div>
             <form
-              id="contact-form"
+              id="proj-contact-form"
               className="p-4 p-md-5 border rounded-0 bg-body-tertiary"
               method="POST"
               action=""
@@ -48,11 +59,12 @@ export default function ProjectCollabBlock () {
               </div>
     
               <button
-                id="contactus"
+                id="pcontactus"
                 className="w-100 btn btn-lg btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#contactModal"
                 type="button"
+                onClick={handleOpenModal}
               >
                 Contact Us
               </button>
