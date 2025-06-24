@@ -24,44 +24,74 @@ export default function Calendar() {
     setSelectedDate(dateStr);
     setModalVisible(true);
   };
+/**
+ * Modify the calendar days to switch months with 'full calendar' view of days previous month next month leading for complete calendar rows
+*/   
+const renderCalendarDays = () => {
+  const days = [];
 
-  const renderCalendarDays = () => {
-    const totalDays = daysInMonth(currentMonth, currentYear);
-    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+  const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+  const startDay = firstDayOfMonth.getDay(); // Sunday = 0
+  const totalDays = daysInMonth(currentMonth, currentYear);
 
-    const days = [];
+  // Previous month
+  const prevMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+  const prevYear = currentMonth === 0 ? currentYear - 1 : currentYear;
+  const daysInPrevMonth = daysInMonth(prevMonth, prevYear);
 
-    // Empty slots before the first day
-    for (let i = 0; i < firstDay; i++) {
-      days.push(<div key={`empty-${i}`} className="day empty" />);
-    }
+  // Add previous month's trailing days
+  for (let i = startDay - 1; i >= 0; i--) {
+    const day = daysInPrevMonth - i;
+    days.push(
+      <div key={`prev-${day}`} className="day other-month">
+        {day}
+      </div>
+    );
+  }
 
-    for (let d = 1; d <= totalDays; d++) {
-      const dayDate = new Date(currentYear, currentMonth, d);
-      const isPast = dayDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
-      const isToday =
-        d === today.getDate() &&
-        currentMonth === today.getMonth() &&
-        currentYear === today.getFullYear();
+  // Add current month's days
+  for (let d = 1; d <= totalDays; d++) {
+    const dayDate = new Date(currentYear, currentMonth, d);
+    const isPast = dayDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const isToday =
+      d === today.getDate() &&
+      currentMonth === today.getMonth() &&
+      currentYear === today.getFullYear();
 
-      let className = "day";
-      if (isPast) className += " disabled";
-      else className += " clickable";
-      if (isToday) className += " today";
+    let className = "day";
+    if (isPast) className += " disabled";
+    else className += " clickable";
+    if (isToday) className += " today";
 
-      days.push(
-        <div
-          key={d}
-          className={className}
-          onClick={!isPast ? () => handleDayClick(d) : undefined}
-          aria-disabled={isPast}
-        >
-          {d}
-        </div>
-      );
-    }
-    return days;
-  };
+    days.push(
+      <div
+        key={`current-${d}`}
+        className={className}
+        onClick={!isPast ? () => handleDayClick(d) : undefined}
+        aria-disabled={isPast}
+      >
+        {d}
+      </div>
+    );
+  }
+
+  // Add next month's leading days to complete the grid
+  const totalSlots = days.length;
+  const nextDaysToFill = totalSlots % 7 === 0 ? 0 : 7 - (totalSlots % 7);
+
+  for (let i = 1; i <= nextDaysToFill; i++) {
+    days.push(
+      <div key={`next-${i}`} className="day other-month">
+        {i}
+      </div>
+    );
+  }
+
+  return days;
+};
+  
+
+
   /** handle the existing contactModal to send a form request instead of a phone call. */
 const openBootstrapModal = (modalId: string) => {
   const modalEl = document.getElementById(modalId);
