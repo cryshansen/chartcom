@@ -1,0 +1,51 @@
+.masonry-container {
+  column-count: 1;
+  column-gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  .masonry-container {
+    column-count: 2;
+  }
+}
+@media (min-width: 768px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+@media (min-width: 992px) {
+  .masonry-container {
+    column-count: 4;
+  }
+}
+
+.photo-box {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+/* Simulate 3x5 image sizing */
+.portrait {
+  width: 300px;
+  height: 500px;
+}
+
+.landscape {
+  width: 500px;
+  height: 300px;
+}
+
+.photo-label {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

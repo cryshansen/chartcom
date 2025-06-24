@@ -1,0 +1,14 @@
+.gallery-container {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom:550px;
+  clear:both;
+}
+
+.block {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}

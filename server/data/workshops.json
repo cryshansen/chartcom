@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "theme": "White Studio",
+    "category": "Photography",
+    "title": "Exposing for White",
+    "subtitle": "High-Key Studio Photography",
+    "date": "2025-06-01",
+    "description": "Work with white-on-white scenes like models in white clothing against a white backdrop. Learn how to avoid overexposure while maintaining shadow detail.",
+    "image" : "/images/studio1/daniele-levis-pelusi-rbz9fyM7C44-unsplash.jpg",
+    "featured":true
+  },
+  {
+    "id": 2,
+    "theme": "White Studio",
+    "category": "Photography",
+    "title": "Minimalist Portraits in White",
+    "subtitle": "Body Language & Light",
+    "date": "2025-06-03",
+    "description": "Focus on capturing subtle emotion using facial expressions, gestures, and soft lighting in an all-white environment.",
+    "image" : "/images/studio1/nadi-spasibenko-VXQvz1t7uHk-unsplash.jpg",
+    "featured":false
+  },
+  {
+    "id": 3,
+     "theme": "White Studio",
+    "category": "Photography",
+    "title": "Movement in Monochrome",
+    "subtitle": "Study of Form and Flow",
+    "date": "2025-06-05",
+    "description": "Use flowing fabrics and motion against a white backdrop to create ethereal, expressive photographs.",
+    "image":"/images/studio1/yue-ma-Dw46btG90Xg-unsplash.jpg",
+    "featured":true
+  },
+  {
+    "id": 4,
+    "theme": "White Studio",
+    "category": "Painting",
+    "title": "Whites in Color",
+    "subtitle": "Tones and Temperature",
+    "date": "2025-06-07",
+    "description": "Explore the warm and cool variations of white. Learn to build dynamic compositions using minimal color and layered brushwork.",
+    "image":"/images/studio1/nadir-syzygy--WUhp-1aabo-unsplash.jpg",
+    "featured":true
+  },
+  {
+    "id": 5,
+    "theme": "White Studio",
+    "category": "Painting",
+    "title": "Negative Space Composition",
+    "subtitle": "Let White Speak",
+    "date": "2025-06-09",
+    "description": "Master the balance between painted and untouched canvas. Use negative space to guide the eye and tell visual stories.",
+    "image":"/images/studio1/karen-bullaro-KU_6agYOPzQ-unsplash.jpg",
+    "featured":false
+  },
+  {
+    "id": 6,
+    "theme": "White Studio",    
+    "category": "Painting",
+    "title": "Textural Techniques in White",
+    "subtitle": "Dry Brush, Salt, and Masking",
+    "date": "2025-06-11",
+    "description": "Use tools and techniques to create texture in a white-dominant painting without relying on color.",
+    "image":"/images/studio1/europeana-5oHiGDCsNto-unsplash.jpg",
+    "featured":false
+  },
+  {
+    "id": 7,
+    "theme": "White Studio",    
+    "category": "Mixed Media",
+    "title": "White Noise",
+    "subtitle": "Abstract Concepts in Monochrome",
+    "date": "2025-06-13",
+    "description": "Interpret silence, clarity, or isolation using only white and texture. Work with multiple media including paper, paint, and light.",
+    "image":"",
+    "featured":false
+  },
+  {
+    "id": 8,
+    "theme": "White Studio",    
+    "category": "Mixed Media",
+    "title": "Whiteout",
+    "subtitle": "Erasure & Emergence",
+    "date": "2025-06-15",
+    "description": "Paint over previous work using white, then allow new forms to emerge. A workshop exploring transformation and memory.",
+    "image": "/images/studio1/white-plaster-hwkaji-upsplash.png",
+    "featured":false
+  },
+  {
+    "id": 9,
+    "theme": "White Studio",    
+    "category": "Photography",
+    "title": "Texture and Tonality Challenge",
+    "subtitle": "White Macro Study",
+    "date": "2025-06-17",
+    "description": "Capture the nuance of texture in white objects — skin, fabric, or paper — using close-up lenses and controlled lighting.",
+    "featured":false
+  },
+  {
+    "id": 10,
+    "theme": "White Studio",    
+    "category": "Painting",
+    "title": "Monochrome Mood Studies",
+    "subtitle": "White and One Color",
+    "date": "2025-06-19",
+    "description": "Create an entire emotional study using only white and one color. Develop your expressive voice through constraint.",
+    "featured":false
+  },
+   {
+    "id": 11,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Through the Looking Lens",
+    "subtitle": "Surreal Self-Portraiture",
+    "date": "2025-07-01",
+    "description": "Create self-portraits inspired by Alice in Wonderland using mirrors, costumes, and dreamlike lighting setups.",
+    "featured":false
+  },
+  {
+    "id": 12,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Lighting the Unexpected",
+    "subtitle": "Glow, Shadow, and Magic",
+    "date": "2025-07-03",
+    "description": "Experiment with colored gels, spotlights, and low-key lighting to cast dramatic or magical effects on your subjects.",
+    "featured":false
+  },
+  {
+    "id": 13,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Character Study",
+    "subtitle": "Model Direction for Fantasy Themes",
+    "date": "2025-07-05",
+    "description": "Work with models to bring fictional characters to life. Learn how to direct body language and expression to tell visual stories.",
+    "featured":false
+  },
+  {
+    "id": 14,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Prop Play",
+    "subtitle": "Visual Narrative Through Set Design",
+    "date": "2025-07-07",
+    "description": "Design and photograph whimsical sets using props, smoke, fabric, and foreground tricks to build an immersive image world.",
+    "featured":false
+  },
+  {
+    "id": 15,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Dreamscapes in Motion",
+    "subtitle": "Slow Shutter & Movement",
+    "date": "2025-07-09",
+    "description": "Use blur and long exposure to capture surreal movement and layered dreamlike imagery in your portraits.",
+    "featured":false
+  },
+  {
+    "id": 16,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "The Rabbit Hole",
+    "subtitle": "Unusual Angles & Depth",
+    "date": "2025-07-11",
+    "description": "Play with wide-angle lenses, extreme perspectives, and unusual cropping to make the viewer feel like they’ve fallen into a fantasy world.",
+    "featured":false
+  },
+  {
+    "id": 17,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Costume & Color Theory",
+    "subtitle": "Storytelling with Fabric and Hue",
+    "date": "2025-07-13",
+    "description": "Explore how costume styling and coordinated color palettes can elevate your photoshoot from stylistic to cinematic.",
+    "featured":false
+
+  },
+  {
+    "id": 18,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Eyes Wide Open",
+    "subtitle": "Dramatic Expression in Portraiture",
+    "date": "2025-07-15",
+    "description": "Focus on directing facial expression and gaze to evoke curiosity, tension, and fantasy.",
+    "featured":false
+  },
+  {
+    "id": 19,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Miniature Worlds",
+    "subtitle": "Forced Perspective & Tiny Sets",
+    "date": "2025-07-17",
+    "description": "Create optical illusions using scale, placement, and props to produce whimsical and surreal scenes in-camera.",
+    "featured":false
+  },
+  {
+    "id": 20,
+    "category": "Photography",
+    "theme": "Wonderland",
+    "title": "Curiouser and Curiouser",
+    "subtitle": "Layered Meanings in Visual Art",
+    "date": "2025-07-19",
+    "description": "Work with symbolism, metaphor, and narrative layering in photography to suggest deeper stories beneath your visual choices.",
+    "featured":false
+  }
+]

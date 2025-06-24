@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Lavender + Rose Serum",
+    "description": "A calming blend for radiant skin.",
+    "price": "$18.00",
+    "imgSrc": "/images/apothecary/tetiana-shadrina-SWW6BAASQH4-unsplash.jpg",
+    "category": "serums",
+    "essential_oils": [
+      {
+        "name": "Lavender",
+        "therapeutic_uses": ["relaxation", "sleep aid", "skin soothing", "stress relief"],
+        "note": "middle",
+        "blending_categories": ["floral", "herbaceous"]
+      },
+      {
+        "name": "Rose",
+        "therapeutic_uses": ["hydration", "skin repair", "anti-inflammatory"],
+        "note": "middle",
+        "blending_categories": ["floral"]
+      }
+    ]
+  },
+  {
+    "title": "Eucalyptus Mint Soap",
+    "description": "Invigorating, all-natural cold-processed soap.",
+    "price": "$8.00",
+    "imgSrc": "/images/apothecary/iain-robertson-G46PxOQSdnA-unsplash.jpg",
+    "category": "soaps",
+    "essential_oils": [
+      {
+        "name": "Eucalyptus",
+        "therapeutic_uses": ["respiratory support", "decongestant", "antibacterial"],
+        "note": "top",
+        "blending_categories": ["camphorous", "herbaceous"]
+      },
+      {
+        "name": "Peppermint",
+        "therapeutic_uses": ["headache relief", "digestion", "energy", "sinus relief"],
+        "note": "top",
+        "blending_categories": ["minty", "herbaceous"]
+      }
+    ]
+  },
+  {
+    "title": "Citrus Grove Oil",
+    "description": "Bright, uplifting essential oil blend.",
+    "price": "$14.00",
+    "imgSrc": "/images/apothecary/jeremy-yap-ZZU9Wqzpj-M-unsplash.jpg",
+    "category": "oils",
+    "essential_oils": [
+      {
+        "name": "Sweet Orange",
+        "therapeutic_uses": ["mood lifting", "stress relief", "cleaning"],
+        "note": "top",
+        "blending_categories": ["citrus"]
+      },
+      {
+        "name": "Grapefruit",
+        "therapeutic_uses": ["energizing", "metabolism", "air freshening"],
+        "note": "top",
+        "blending_categories": ["citrus"]
+      },
+      {
+        "name": "Lemon",
+        "therapeutic_uses": ["uplifting", "cleansing", "detoxifying", "air freshener"],
+        "note": "top",
+        "blending_categories": ["citrus"]
+      }
+    ]
+  }
+]

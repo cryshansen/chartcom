@@ -1,0 +1,10 @@
+Data files that provide automatic data loads for api testing
+
+# Products
+
+These are blended formulas based on the essential oil `products.json`
+
+# Blends of Products and Small Batch products
+
+The Product Blends under `productblends.json` is the first development of apothecary page
+

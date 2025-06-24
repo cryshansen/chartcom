@@ -10,6 +10,28 @@ dist/
 
 # misc
 .DS_Store
+Thumbs.db
 
-src/assets/gallery/**
-!src/assets/gallery/**/demo/**
+# Node modules
+/node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+client/src/assets/gallery/**
+!client/src/assets/gallery/**/demo/**
+client/public/images/
+server/images/studio3/*
+!server/images/studio3/576_clean
+server/images/studio1/*
+!server/images/studio1/576_clean
+server/images/studio2/*
+!server/images/studio2/576_clean

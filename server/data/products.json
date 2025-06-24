@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Lavender",
+    "therapeutic_uses": ["relaxation", "sleep aid", "skin soothing", "stress relief"],
+    "note": "middle",
+    "blending_categories": ["floral", "herbaceous"]
+  },
+  {
+    "title": "Peppermint",
+    "therapeutic_uses": ["headache relief", "digestion", "energy", "sinus relief"],
+    "note": "top",
+    "blending_categories": ["minty", "herbaceous"]
+  },
+  {
+    "title": "Tea Tree",
+    "therapeutic_uses": ["antimicrobial", "acne", "cleaning"],
+    "note": "middle",
+    "blending_categories": ["medicinal", "herbaceous"]
+  },
+  {
+    "title": "Eucalyptus",
+    "therapeutic_uses": ["respiratory support", "decongestant", "antibacterial"],
+    "note": "top",
+    "blending_categories": ["camphorous", "herbaceous"]
+  },
+  {
+    "title": "Lemon",
+    "therapeutic_uses": ["uplifting", "cleansing", "detoxifying", "air freshener"],
+    "note": "top",
+    "blending_categories": ["citrus"]
+  },
+  {
+    "title": "Frankincense",
+    "therapeutic_uses": ["meditation", "skincare", "inflammation"],
+    "note": "base",
+    "blending_categories": ["resinous", "woody"]
+  },
+  {
+    "title": "Sweet Orange",
+    "therapeutic_uses": ["mood lifting", "stress relief", "cleaning"],
+    "note": "top",
+    "blending_categories": ["citrus"]
+  },
+  {
+    "title": "Rosemary",
+    "therapeutic_uses": ["focus", "memory", "hair growth", "circulation"],
+    "note": "middle",
+    "blending_categories": ["herbaceous", "camphorous"]
+  },
+  {
+    "title": "Cedarwood",
+    "therapeutic_uses": ["calming", "grounding", "scalp health"],
+    "note": "base",
+    "blending_categories": ["woody"]
+  },
+  {
+    "title": "Geranium",
+    "therapeutic_uses": ["hormone balance", "skincare", "anti-anxiety"],
+    "note": "middle",
+    "blending_categories": ["floral", "green"]
+  },
+  {
+    "title": "Bergamot",
+    "therapeutic_uses": ["antidepressant", "skin brightening", "emotional balance"],
+    "note": "top",
+    "blending_categories": ["citrus", "floral"]
+  },
+  {
+    "title": "Ylang Ylang",
+    "therapeutic_uses": ["aphrodisiac", "calming", "skin/hair care"],
+    "note": "base",
+    "blending_categories": ["floral", "sweet"]
+  },
+  {
+    "title": "Clary Sage",
+    "therapeutic_uses": ["hormonal support", "sleep", "stress relief"],
+    "note": "middle",
+    "blending_categories": ["herbaceous", "floral"]
+  },
+  {
+    "title": "Cinnamon",
+    "therapeutic_uses": ["warming", "antimicrobial", "energizing"],
+    "note": "base",
+    "blending_categories": ["spicy"]
+  },
+  {
+    "title": "Patchouli",
+    "therapeutic_uses": ["grounding", "skincare", "natural perfume"],
+    "note": "base",
+    "blending_categories": ["earthy", "woody"]
+  },
+  {
+    "title": "Lemongrass",
+    "therapeutic_uses": ["insect repellent", "pain relief", "purification"],
+    "note": "top",
+    "blending_categories": ["citrus", "herbaceous"]
+  },
+  {
+    "title": "Chamomile",
+    "therapeutic_uses": ["calming", "skin soothing", "sleep"],
+    "note": "middle",
+    "blending_categories": ["floral", "herbaceous"]
+  },
+  {
+    "title": "Spearmint",
+    "therapeutic_uses": ["digestive aid", "mood booster", "refreshing"],
+    "note": "top",
+    "blending_categories": ["minty", "sweet"]
+  },
+  {
+    "title": "Grapefruit",
+    "therapeutic_uses": ["energizing", "metabolism", "air freshening"],
+    "note": "top",
+    "blending_categories": ["citrus"]
+  },
+  {
+    "title": "Vetiver",
+    "therapeutic_uses": ["grounding", "sleep aid", "stress relief"],
+    "note": "base",
+    "blending_categories": ["earthy", "woody"]
+  }
+]

@@ -1,0 +1,167 @@
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+   
+.instagram_feed {
+    padding: 0 .625rem .625rem .625rem;
+    position: relative;
+    overflow: hidden;
+}
+.instagram_feed img {
+    /* display: flex
+; */
+    flex: inherit;
+    max-width: 222px;
+    border: #f4f3f3 1px solid;
+    width: 35%;
+}
+
+.btn-projects {
+    width: 100%;
+     height: auto; 
+    float: left;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top:-15px;
+    background-color:#fff;
+    opacity:.5;
+
+}
+.btn-projects ul {
+  width: auto;
+  height: auto;
+  margin-top:25px;
+  
+}
+.btn-projects ul li {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 0 5px 0 0;
+  border: 0;
+}
+.btn-projects ul li:last-child {
+  margin: 0;
+}
+.btn-projects ul li label {
+  float: left;
+  text-align: center;
+  line-height: 150px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #2E2929;
+  border-radius: 3px;
+  transition: background-color .25s ease-in-out;
+  
+  
+/* The dots/bullets/indicators */
+
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  /* transition: background-color 0.6s ease; */
+}
+.border-primary{border-color: #777 !important;}
+/*btn btn-outline-dark*/
+.quote-slide {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #555;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#profileQuotesCarousel .carousel-inner.text-center{
+    min-height:125px;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #777;
+    background-color: #efefef;
+    border: #777 1px solid;
+    border-radius: 0;
+}
+.btn-outline-primary{
+    --bs-btn-color: #777;
+    --bs-btn-border-color: #777;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: ##efefef;
+    --bs-btn-hover-border-color: #777;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #777;
+    --bs-btn-active-border-color: #777;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #777;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #777;
+    --bs-gradient: none;
+}
+.btn-primary:hover,
+.btn-outline-primary:hover {
+    background-color: #d9d9d9;
+    border-color: #ddd;
+}
+
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: #fff;
+    background-color: #4d4d4d;
+    border-color: #363636;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
