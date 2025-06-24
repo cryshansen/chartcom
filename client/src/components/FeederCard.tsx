@@ -1,5 +1,5 @@
 // FeederCard.tsx
-import React from "react";
+
 import { feederCardData } from "./FeederCardData";
 
 type FeederCardProps = {

@@ -20,9 +20,8 @@ const allImages = import.meta.glob('../assets/gallery/**/*.{jpg,png,webp,JPG}', 
 
 export default function ImageGrid({ category, filterLightOnly = false }: { category: string,filterLightOnly?: boolean }) {
   
-  const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(-1); // inside component
-  const [currentImage, setCurrentImage] = useState<string | null>(null);
+
 
   const images = Object.entries(allImages).filter(([path]) => {
     const isInCategory = path.toLowerCase().includes(category.toLowerCase());

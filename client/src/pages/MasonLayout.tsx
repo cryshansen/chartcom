@@ -2,7 +2,7 @@
  * testing page for image layouts 
  * NOT dnot implemented on page but is nice layout for images
  */
-import MasonryBlock from '../components/MasonryBlock';
+
 import MasonGrid from '../components/MasonGrid';
 
 const MasonryLayout = () => (

@@ -14,10 +14,10 @@ export default function ProductGallery({ products }: { products: Product[] }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = Array.from(new Set(products.map(p => p.category)));
-  const [product, setProducts] = useState<Product[]>([]);
+  const [productList, setProducts] = useState<Product[]>([]);
   const filtered = selectedCategory === 'all'
-    ? products
-    : products.filter(p => p.category === selectedCategory);
+    ? productList
+    : productList.filter(p => p.category === selectedCategory);
 
 
   useEffect(() => {

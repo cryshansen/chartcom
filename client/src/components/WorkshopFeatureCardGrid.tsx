@@ -13,20 +13,15 @@ interface Workshop {
   featured?: boolean;
 }
 
-interface WorkshopFeatureCardGridProps {
-  workshops: Workshop[];
-  sectionTitle?: string;
-}
 
 export default function  WorkshopFeatureCardGrid() {
-  const [workshops, setWorkshops] = useState<Workshop[]>([]);
+
   const [featured, setFeatured] = useState<Workshop[]>([]);
   const baseUrl = import.meta.env.VITE_API_URL;
   useEffect(() => {
     fetch('/api/workshops') // Adjust if needed
       .then(res => res.json())
       .then(data => {
-        setWorkshops(data);
         const featuredItems = data.filter((w: Workshop) => w.featured);
         setFeatured(featuredItems);
       });

@@ -8,6 +8,7 @@
     "date": "2025-06-01",
     "description": "Work with white-on-white scenes like models in white clothing against a white backdrop. Learn how to avoid overexposure while maintaining shadow detail.",
     "image" : "/images/studio1/daniele-levis-pelusi-rbz9fyM7C44-unsplash.jpg",
+    "buttonLabel" : "Join Today!",
     "featured":true
   },
   {
@@ -19,6 +20,7 @@
     "date": "2025-06-03",
     "description": "Focus on capturing subtle emotion using facial expressions, gestures, and soft lighting in an all-white environment.",
     "image" : "/images/studio1/nadi-spasibenko-VXQvz1t7uHk-unsplash.jpg",
+    "buttonLabel" : "Reserve Spot!",
     "featured":false
   },
   {
@@ -30,6 +32,7 @@
     "date": "2025-06-05",
     "description": "Use flowing fabrics and motion against a white backdrop to create ethereal, expressive photographs.",
     "image":"/images/studio1/yue-ma-Dw46btG90Xg-unsplash.jpg",
+    "buttonLabel" : "Join Now!",
     "featured":true
   },
   {
@@ -41,6 +44,7 @@
     "date": "2025-06-07",
     "description": "Explore the warm and cool variations of white. Learn to build dynamic compositions using minimal color and layered brushwork.",
     "image":"/images/studio1/nadir-syzygy--WUhp-1aabo-unsplash.jpg",
+        "buttonLabel" : "Learn More!",
     "featured":true
   },
   {
@@ -52,6 +56,7 @@
     "date": "2025-06-09",
     "description": "Master the balance between painted and untouched canvas. Use negative space to guide the eye and tell visual stories.",
     "image":"/images/studio1/karen-bullaro-KU_6agYOPzQ-unsplash.jpg",
+    "buttonLabel" : "Register Now!",
     "featured":false
   },
   {
@@ -63,6 +68,7 @@
     "date": "2025-06-11",
     "description": "Use tools and techniques to create texture in a white-dominant painting without relying on color.",
     "image":"/images/studio1/europeana-5oHiGDCsNto-unsplash.jpg",
+    "buttonLabel" : "Sign Up!",
     "featured":false
   },
   {
@@ -74,6 +80,7 @@
     "date": "2025-06-13",
     "description": "Interpret silence, clarity, or isolation using only white and texture. Work with multiple media including paper, paint, and light.",
     "image":"",
+    "buttonLabel" : "Reserve Today!",
     "featured":false
   },
   {
@@ -85,6 +92,7 @@
     "date": "2025-06-15",
     "description": "Paint over previous work using white, then allow new forms to emerge. A workshop exploring transformation and memory.",
     "image": "/images/studio1/white-plaster-hwkaji-upsplash.png",
+    "buttonLabel" : "Register Now!",
     "featured":false
   },
   {
@@ -95,6 +103,7 @@
     "subtitle": "White Macro Study",
     "date": "2025-06-17",
     "description": "Capture the nuance of texture in white objects — skin, fabric, or paper — using close-up lenses and controlled lighting.",
+    "buttonLabel" : "Register Now!",
     "featured":false
   },
   {
@@ -105,6 +114,7 @@
     "subtitle": "White and One Color",
     "date": "2025-06-19",
     "description": "Create an entire emotional study using only white and one color. Develop your expressive voice through constraint.",
+    "buttonLabel" : "Join Today!",
     "featured":false
   },
    {
@@ -115,6 +125,7 @@
     "subtitle": "Surreal Self-Portraiture",
     "date": "2025-07-01",
     "description": "Create self-portraits inspired by Alice in Wonderland using mirrors, costumes, and dreamlike lighting setups.",
+    "buttonLabel" : "Register!",
     "featured":false
   },
   {
@@ -125,6 +136,7 @@
     "subtitle": "Glow, Shadow, and Magic",
     "date": "2025-07-03",
     "description": "Experiment with colored gels, spotlights, and low-key lighting to cast dramatic or magical effects on your subjects.",
+    "buttonLabel" : "Register Now!",
     "featured":false
   },
   {
@@ -145,6 +157,7 @@
     "subtitle": "Visual Narrative Through Set Design",
     "date": "2025-07-07",
     "description": "Design and photograph whimsical sets using props, smoke, fabric, and foreground tricks to build an immersive image world.",
+    "buttonLabel" : "Join Now!",
     "featured":false
   },
   {
@@ -155,6 +168,7 @@
     "subtitle": "Slow Shutter & Movement",
     "date": "2025-07-09",
     "description": "Use blur and long exposure to capture surreal movement and layered dreamlike imagery in your portraits.",
+    "buttonLabel" : "Register Now!",
     "featured":false
   },
   {
@@ -165,6 +179,7 @@
     "subtitle": "Unusual Angles & Depth",
     "date": "2025-07-11",
     "description": "Play with wide-angle lenses, extreme perspectives, and unusual cropping to make the viewer feel like they’ve fallen into a fantasy world.",
+    "buttonLabel" : "Try Today!",
     "featured":false
   },
   {
@@ -175,6 +190,7 @@
     "subtitle": "Storytelling with Fabric and Hue",
     "date": "2025-07-13",
     "description": "Explore how costume styling and coordinated color palettes can elevate your photoshoot from stylistic to cinematic.",
+    "buttonLabel" : "Register Now!",
     "featured":false
 
   },
@@ -186,6 +202,7 @@
     "subtitle": "Dramatic Expression in Portraiture",
     "date": "2025-07-15",
     "description": "Focus on directing facial expression and gaze to evoke curiosity, tension, and fantasy.",
+    "buttonLabel" : "Join Today!",
     "featured":false
   },
   {
@@ -196,6 +213,7 @@
     "subtitle": "Forced Perspective & Tiny Sets",
     "date": "2025-07-17",
     "description": "Create optical illusions using scale, placement, and props to produce whimsical and surreal scenes in-camera.",
+    "buttonLabel" : "Register Now!",
     "featured":false
   },
   {
@@ -206,6 +224,7 @@
     "subtitle": "Layered Meanings in Visual Art",
     "date": "2025-07-19",
     "description": "Work with symbolism, metaphor, and narrative layering in photography to suggest deeper stories beneath your visual choices.",
+    "buttonLabel" : "Reserve Spot!",    
     "featured":false
   }
 ]

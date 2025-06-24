@@ -1,5 +1,4 @@
 import ArtelierCarousel from '../components/ArtelierCarousel' 
-import Arteliers from '../components/Arteliers' 
 import WorkshopFeatureCardGrid from '../components/WorkshopFeatureCardGrid';
 import StudioCollabBlock from '../components/StudioCollabBlock' 
 import Studios from "../components/Studios"

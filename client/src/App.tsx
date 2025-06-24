@@ -20,7 +20,7 @@ import MasonryLayout from './pages/MasonLayout'
 
 import Workshops from './pages/Workshops';
 import NotFound from './pages/NotFound';
-import 'styles.css';
+
 
 
 function App() {

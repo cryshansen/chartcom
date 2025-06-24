@@ -1,5 +1,5 @@
 // StudioGallery.tsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import MasonryBlocks from '../components/MasonryBlock';
 
 interface StudioImage {

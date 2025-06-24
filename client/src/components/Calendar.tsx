@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./calendar.css";
 
 export default function Calendar() {
@@ -12,6 +12,9 @@ export default function Calendar() {
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
+  
+  const yearRange = Array.from({ length: 2 }, (_, i) => today.getFullYear() + i);
+
 
   const daysInMonth = (month: number, year: number) =>
     new Date(year, month + 1, 0).getDate();
@@ -73,12 +76,27 @@ const openBootstrapModal = (modalId: string) => {
     <>
       <div className="calendar" id="calendar">
         <div className="calendar-header d-flex align-items-center justify-content-between">
-          <div className="calendar-btn btn btn-primary month-btn">
-            <span>{months[currentMonth]}</span>
-          </div>
-          <div className="calendar-btn btn btn-primary year-btn">
-            <span>{currentYear}</span>
-          </div>
+          {/* Month Selector */}
+          <select
+            className="form-select w-auto calendar-btn btn btn-primary month-btn px-5"
+            value={currentMonth}
+            onChange={(e) => setCurrentMonth(Number(e.target.value))}
+          >
+            {months.map((month, i) => (
+              <option key={month} value={i}>{month}</option>
+            ))}
+          </select>
+
+          {/* Year Selector */}
+          <select
+            className="form-select w-auto calendar-btn btn btn-primary year-btn px-5"
+            value={currentYear}
+            onChange={(e) => setCurrentYear(Number(e.target.value))}
+          >
+            {yearRange.map((year) => (
+              <option key={year} value={year}>{year}</option>
+            ))}
+          </select>
         </div>
 
         <div className="calendar-dates mt-3">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import WorkshopHeroBlock from "../components/WorkshopHeroBlock";
 import  WorkshopFeatureCardGrid from "../components/WorkshopFeatureCardGrid";
 import WorkshopCardGrid from '../components/WorkshopCardGrid';
@@ -21,7 +21,9 @@ const Workshops = () =>{
   const [filteredWorkshops, setFilteredWorkshops] = useState<Workshop[]>([]);
   const [themes, setThemes] = useState<string[]>([]);
   const [activeTheme, setActiveTheme] = useState<string>('All');
+  /* deprecated moved to WorkshopFeatureCardGrid 
   const [featured, setFeatured] = useState<Workshop[]>([]);
+  */
 
   const handleFilter = (theme: string) => {
     setActiveTheme(theme);
@@ -37,11 +39,13 @@ const Workshops = () =>{
       .then(res => res.json())
       .then(data => {
         setWorkshops(data);
-         setFilteredWorkshops(data);
+        setFilteredWorkshops(data);
         const uniqueThemes: string[] = Array.from(new Set(data.map((w: Workshop) => w.theme)));
         setThemes(uniqueThemes);
-        const featuredItems = data.filter((w: Workshop) => w.featured);
-        setFeatured(featuredItems);
+        /* deprecated moved to WorkshopFeatureCardGrid
+          const featuredItems = data.filter((w: Workshop) => w.featured);
+          setFeatured(featuredItems);
+         */
         setLoading(false);
       })
       .catch(err => {
