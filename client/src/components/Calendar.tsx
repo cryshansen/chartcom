@@ -19,44 +19,66 @@ export default function Calendar() {
   const daysInMonth = (month: number, year: number) =>
     new Date(year, month + 1, 0).getDate();
 
-  const handleDayClick = (day: number) => {
-    const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+  const handleDayClick = (day: number, month: number, year: number) => {
+    const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
     setSelectedDate(dateStr);
     setModalVisible(true);
   };
 /**
  * Modify the calendar days to switch months with 'full calendar' view of days previous month next month leading for complete calendar rows
+ * in addition:
+ * Pad the calendar with previous and next month's days so the grid is complete
+
+✅ Disable and gray out any dates before today's month
+
+✅ Style non-current-month dates with a light grey background
+* Dates from previous month are non clickable and greyed out. 
+*Dates from next month that are greater than today are clickable and styled normal
+*
 */   
 const renderCalendarDays = () => {
   const days = [];
-
   const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
-  const startDay = firstDayOfMonth.getDay(); // Sunday = 0
   const totalDays = daysInMonth(currentMonth, currentYear);
+  const startDay = firstDayOfMonth.getDay(); // 0 = Sunday
 
-  // Previous month
+  // Get date values for previous/next month
   const prevMonth = currentMonth === 0 ? 11 : currentMonth - 1;
   const prevYear = currentMonth === 0 ? currentYear - 1 : currentYear;
-  const daysInPrevMonth = daysInMonth(prevMonth, prevYear);
+  const prevMonthDays = daysInMonth(prevMonth, prevYear);
 
-  // Add previous month's trailing days
+  const nextMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+  const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+
+  const isSameMonthAsToday = currentMonth === today.getMonth() && currentYear === today.getFullYear();
+
+  // ➤ PREVIOUS MONTH padding
   for (let i = startDay - 1; i >= 0; i--) {
-    const day = daysInPrevMonth - i;
+    const day = prevMonthDays - i;
+    const isBeforeThisMonth = currentYear < today.getFullYear() ||
+      (currentYear === today.getFullYear() && currentMonth < today.getMonth());
+
     days.push(
-      <div key={`prev-${day}`} className="day other-month">
+      <div
+        key={`prev-${day}`}
+        className={`day other-month ${isBeforeThisMonth ? 'disabled' : 'clickable'}`}
+        onClick={!isBeforeThisMonth ? () => handleDayClick(day,prevMonth, prevYear) : undefined}
+        aria-disabled={isBeforeThisMonth}
+      >
         {day}
       </div>
     );
   }
 
-  // Add current month's days
+  // ➤ CURRENT MONTH days
   for (let d = 1; d <= totalDays; d++) {
-    const dayDate = new Date(currentYear, currentMonth, d);
-    const isPast = dayDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const date = new Date(currentYear, currentMonth, d);
     const isToday =
       d === today.getDate() &&
       currentMonth === today.getMonth() &&
       currentYear === today.getFullYear();
+    const isPast =
+      date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
     let className = "day";
     if (isPast) className += " disabled";
@@ -67,7 +89,7 @@ const renderCalendarDays = () => {
       <div
         key={`current-${d}`}
         className={className}
-        onClick={!isPast ? () => handleDayClick(d) : undefined}
+        onClick={!isPast ? () => handleDayClick(d,currentMonth, currentYear) : undefined}
         aria-disabled={isPast}
       >
         {d}
@@ -75,13 +97,17 @@ const renderCalendarDays = () => {
     );
   }
 
-  // Add next month's leading days to complete the grid
+  // ➤ NEXT MONTH padding
   const totalSlots = days.length;
   const nextDaysToFill = totalSlots % 7 === 0 ? 0 : 7 - (totalSlots % 7);
 
   for (let i = 1; i <= nextDaysToFill; i++) {
     days.push(
-      <div key={`next-${i}`} className="day other-month">
+      <div
+        key={`next-${i}`}
+        className="day other-month clickable"
+        onClick={() => handleDayClick(i, nextMonth,nextYear)}
+      >
         {i}
       </div>
     );
@@ -89,7 +115,6 @@ const renderCalendarDays = () => {
 
   return days;
 };
-  
 
 
   /** handle the existing contactModal to send a form request instead of a phone call. */
@@ -106,15 +131,22 @@ const openBootstrapModal = (modalId: string) => {
     <>
       <div className="calendar" id="calendar">
         <div className="calendar-header d-flex align-items-center justify-content-between">
-          {/* Month Selector */}
+          {/* Month Selector disable months that are previous for this year */}
           <select
             className="form-select w-auto calendar-btn btn btn-primary month-btn px-5"
             value={currentMonth}
             onChange={(e) => setCurrentMonth(Number(e.target.value))}
           >
-            {months.map((month, i) => (
-              <option key={month} value={i}>{month}</option>
-            ))}
+            {months.map((month, i) => {
+              const isPastMonth =
+                currentYear === today.getFullYear() && i < today.getMonth();
+
+              return (
+                <option key={month} value={i} disabled={isPastMonth}>
+                  {month}
+                </option>
+              );
+            })}
           </select>
 
           {/* Year Selector */}
