@@ -86,7 +86,42 @@ app.get('/api/workshops', (req, res) => {
   });
 });
 
+/** wired up with a cron job below it that generates a months of dates based on todays date + 1 month, run 'fakeStudioBooking() <-- run immediately npm run dev */
+app.get('/api/bookings/month', (req, res) => {
+  const year = parseInt(req.query.year);
+  const month = parseInt(req.query.month);
 
+  const dataPath = path.join(__dirname, 'data', 'bookings.json');
+  let bookings;
+
+  try {
+    const raw = fs.readFileSync(dataPath, 'utf8');
+    bookings = JSON.parse(raw);
+  } catch (err) {
+    return res.status(500).json({ error: 'Failed to read booking data.' });
+  }
+
+  const filtered = {};
+
+  Object.keys(bookings).forEach(date => {
+    const [y, m] = date.split('-').map(Number);
+    if (y === year && m === month) {
+      filtered[date] = bookings[date].length;
+    }
+  });
+
+  res.json(filtered);
+});
+
+const cron = require('node-cron');
+const fakeStudioBooking = require('./utils/fakeStudioBookings');
+//fakeStudioBooking(); // <-- Run immediately Init when building first local system that includes the calendar
+//Default is to run on schedule for a realistic days bookings 
+// Run every day at 00:01 AM
+cron.schedule('1 0 * * *', () => {
+  console.log('🕐 Running daily studio booking generator...');
+  fakeStudioBooking();
+});
 
 
 app.listen(port, () => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./calendar.css";
 
 export default function Calendar() {
@@ -7,6 +7,8 @@ export default function Calendar() {
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedDate, setSelectedDate] = useState<string>("");
+  const [bookedDates, setBookedDates] = useState<{ [key: string]: number }>({});
+
 
   const months = [
     "January", "February", "March", "April", "May", "June",
@@ -14,6 +16,14 @@ export default function Calendar() {
   ];
   
   const yearRange = Array.from({ length: 2 }, (_, i) => today.getFullYear() + i);
+    useEffect(() => {
+      const year = currentYear;
+      const month = currentMonth + 1; // JS is 0-based
+
+      fetch(`/api/bookings/month?year=${year}&month=${month}`)
+        .then(res => res.json())
+        .then(data => setBookedDates(data));
+    }, [currentMonth, currentYear]);
 
 
   const daysInMonth = (month: number, year: number) =>
@@ -24,6 +34,8 @@ export default function Calendar() {
     setSelectedDate(dateStr);
     setModalVisible(true);
   };
+
+
 /**
  * Modify the calendar days to switch months with 'full calendar' view of days previous month next month leading for complete calendar rows
  * in addition:
@@ -78,7 +90,15 @@ const renderCalendarDays = () => {
     const isPast =
       date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
+    const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+
+    const bookingCount = bookedDates[dateStr] || 0;
     let className = "day";
+    if (bookingCount >= 4) className += " heavy-booked";     // red
+    else if (bookingCount >= 2) className += " medium-booked"; // orange
+    else if (bookingCount === 1) className += " light-booked"; // green
+    else className += " available";
+
     if (isPast) className += " disabled";
     else className += " clickable";
     if (isToday) className += " today";
@@ -170,6 +190,24 @@ const openBootstrapModal = (modalId: string) => {
             {renderCalendarDays()}
           </div>
         </div>
+      </div>
+      <div className="clearfix"></div>
+      <div className="calendar-legend container mt-5">
+        <h6 className="mb-2">Booking Status Legend:</h6>
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            <span className="legend-box  bg-white border pe-2 me-2"></span> Empty / Available
+          </li>
+          <li className="list-inline-item">
+            <span className="legend-box light-booked pe-2 me-2"></span> Lightly Booked
+          </li>
+          <li className="list-inline-item">
+            <span className="legend-box heavy-booked  text-white pe-2 me-2"></span> Heavily Booked
+          </li>
+          <li className="list-inline-item">
+            <span className="legend-box disabled text-white pe-2 me-2"></span> Past Month Day
+          </li>
+        </ul>
       </div>
       <div className="clearfix"></div>
       {/* Bootstrap 5 Modal */}

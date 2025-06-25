@@ -73,7 +73,17 @@ npm install --save-dev nodemon  /*allows rebuild as change files*/
 npm install express image-size /* allows to manage sizing images or reading image size tbd*/
 
 npm install cors
+npm install node-cron
 
+# Cron Job creates a booking.json per day at 00:01AM
+The cron is required for the fakeStudioBookings.js file that generates dates for demo in the calendar. It can be changed to hook to a database instead. this is for breavity. 
+
+Initialize the bookings.json with today forward a mont days 
+in server.cjs uncomment //fakeStudioBooking(); // <-- Run immediately Init
+in fakeStudioBookings.js 
+comment out  -->  module.exports = updateBookings;
+uncomment  -->//module.exports = updateInitialBookings; 
+in the server folder run terminal npm run dev
 
 
 

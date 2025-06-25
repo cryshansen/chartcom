@@ -1,0 +1,729 @@
+{
+  "2025-06-23": [
+    {
+      "name": "Jay",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Sophie",
+      "purpose": "Portrait",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-06-24": [
+    {
+      "name": "Elena",
+      "purpose": "Workshop",
+      "start": "09:00",
+      "end": "12:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-06-25": [
+    {
+      "name": "Noah",
+      "purpose": "Workshop",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Portrait",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Product Shoot",
+      "start": "17:00",
+      "end": "19:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Elena",
+      "purpose": "Workshop",
+      "start": "13:00",
+      "end": "16:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Ava",
+      "purpose": "Music Video",
+      "start": "10:00",
+      "end": "12:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-06-26": [
+    {
+      "name": "Noah",
+      "purpose": "Music Video",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Elena",
+      "purpose": "Product Shoot",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Noah",
+      "purpose": "Workshop",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Jay",
+      "purpose": "Music Video",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-06-27": [
+    {
+      "name": "Noah",
+      "purpose": "Portrait",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-06-28": [
+    {
+      "name": "Jay",
+      "purpose": "Product Shoot",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Liam",
+      "purpose": "Product Shoot",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-06-29": [
+    {
+      "name": "Liam",
+      "purpose": "Workshop",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Jay",
+      "purpose": "Music Video",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Ava",
+      "purpose": "Rehearsal",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-06-30": [
+    {
+      "name": "Sophie",
+      "purpose": "Portrait",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-01": [
+    {
+      "name": "Jay",
+      "purpose": "Product Shoot",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Jay",
+      "purpose": "Music Video",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Elena",
+      "purpose": "Rehearsal",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Jay",
+      "purpose": "Portrait",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-02": [
+    {
+      "name": "Liam",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Elena",
+      "purpose": "Rehearsal",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-03": [
+    {
+      "name": "Ava",
+      "purpose": "Portrait",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Liam",
+      "purpose": "Rehearsal",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Portrait",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Elena",
+      "purpose": "Workshop",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-04": [
+    {
+      "name": "Jay",
+      "purpose": "Product Shoot",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Jay",
+      "purpose": "Music Video",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Sophie",
+      "purpose": "Portrait",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Music Video",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-05": [
+    {
+      "name": "Ava",
+      "purpose": "Product Shoot",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-06": [
+    {
+      "name": "Elena",
+      "purpose": "Workshop",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Liam",
+      "purpose": "Portrait",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Ava",
+      "purpose": "Rehearsal",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-07": [
+    {
+      "name": "Ava",
+      "purpose": "Workshop",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Noah",
+      "purpose": "Workshop",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Workshop",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-08": [
+    {
+      "name": "Elena",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Noah",
+      "purpose": "Workshop",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Product Shoot",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Elena",
+      "purpose": "Workshop",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-09": [
+    {
+      "name": "Elena",
+      "purpose": "Product Shoot",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Product Shoot",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Jay",
+      "purpose": "Product Shoot",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-10": [
+    {
+      "name": "Zoe",
+      "purpose": "Workshop",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-11": [
+    {
+      "name": "Liam",
+      "purpose": "Workshop",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Product Shoot",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Rehearsal",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-12": [
+    {
+      "name": "Elena",
+      "purpose": "Portrait",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Workshop",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-13": [
+    {
+      "name": "Zoe",
+      "purpose": "Workshop",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Liam",
+      "purpose": "Portrait",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-14": [
+    {
+      "name": "Noah",
+      "purpose": "Rehearsal",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Elena",
+      "purpose": "Portrait",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-15": [
+    {
+      "name": "Marcus",
+      "purpose": "Product Shoot",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-16": [
+    {
+      "name": "Sophie",
+      "purpose": "Product Shoot",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-17": [
+    {
+      "name": "Noah",
+      "purpose": "Portrait",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-18": [
+    {
+      "name": "Elena",
+      "purpose": "Product Shoot",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Liam",
+      "purpose": "Portrait",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Music Video",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Sophie",
+      "purpose": "Music Video",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-19": [
+    {
+      "name": "Zoe",
+      "purpose": "Rehearsal",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Ava",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-20": [
+    {
+      "name": "Noah",
+      "purpose": "Portrait",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Noah",
+      "purpose": "Music Video",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Sophie",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-21": [
+    {
+      "name": "Jay",
+      "purpose": "Music Video",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Sophie",
+      "purpose": "Portrait",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Rehearsal",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-22": [
+    {
+      "name": "Sophie",
+      "purpose": "Product Shoot",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Jay",
+      "purpose": "Music Video",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Zoe",
+      "purpose": "Workshop",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-23": [
+    {
+      "name": "Liam",
+      "purpose": "Portrait",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-24": [
+    {
+      "name": "Zoe",
+      "purpose": "Rehearsal",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-25": [
+    {
+      "name": "Sophie",
+      "purpose": "Music Video",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Ava",
+      "purpose": "Music Video",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Rehearsal",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-26": [
+    {
+      "name": "Elena",
+      "purpose": "Portrait",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Jay",
+      "purpose": "Product Shoot",
+      "start": "09:00",
+      "end": "10:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-27": [
+    {
+      "name": "Elena",
+      "purpose": "Music Video",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 3
+    }
+  ],
+  "2025-07-28": [
+    {
+      "name": "Noah",
+      "purpose": "Rehearsal",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Portrait",
+      "start": "12:00",
+      "end": "13:00",
+      "studio_id": 3
+    },
+    {
+      "name": "Elena",
+      "purpose": "Rehearsal",
+      "start": "10:00",
+      "end": "11:00",
+      "studio_id": 2
+    }
+  ],
+  "2025-07-29": [
+    {
+      "name": "Marcus",
+      "purpose": "Rehearsal",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Jay",
+      "purpose": "Product Shoot",
+      "start": "16:00",
+      "end": "17:00",
+      "studio_id": 1
+    }
+  ],
+  "2025-07-30": [
+    {
+      "name": "Ava",
+      "purpose": "Music Video",
+      "start": "13:00",
+      "end": "14:00",
+      "studio_id": 2
+    },
+    {
+      "name": "Ava",
+      "purpose": "Product Shoot",
+      "start": "14:00",
+      "end": "15:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Marcus",
+      "purpose": "Rehearsal",
+      "start": "11:00",
+      "end": "12:00",
+      "studio_id": 1
+    },
+    {
+      "name": "Liam",
+      "purpose": "Rehearsal",
+      "start": "15:00",
+      "end": "16:00",
+      "studio_id": 2
+    }
+  ]
+}

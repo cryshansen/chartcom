@@ -123,9 +123,10 @@
 .clear{
     clear:both;
 }
-
+.disabled,
 .day.disabled {
   color: #999999;
+  background-color: #eaeaea;
   cursor: not-allowed;
   pointer-events: none; /* disables click */
 }
@@ -133,7 +134,25 @@
 .day.clickable {
   cursor: pointer;
 }
-
+.heavy-booked,
+.day.heavy-booked {
+  background-color: #f8d7da;
+}
+.medium-booked,
+.day.medium-booked {
+  background-color: #fff3cd;
+}
+.light-booked,
+.day.light-booked {
+  background-color: #d4edda;
+}
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
 
 @media only screen and (max-width: 960px) {
     .calendar{
