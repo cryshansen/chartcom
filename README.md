@@ -24,7 +24,7 @@ This is a custom React-based image gallery project using a minimal Node.js and W
 - React / ReactDOM
 - TypeScript
 - Webpack + Babel
-- Bootstrap (for styling)
+- Bootstrap (for modals, tabbing and styling)
 - Optional: Sass for custom styling
 
 
@@ -91,3 +91,9 @@ in the server folder run terminal npm run dev
 
 import MasonryLayout from './pages/MasonLayout'
 <Route path="/masonry" element={<MasonryLayout />} />
+
+
+# Server 
+Node Server inclusion /server/server.cjs exists to run a local node installation
+
+Alternative is the PHP-API built for PHP/MySql host packages. https://github.com/cryshansen/PHP-API.git 

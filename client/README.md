@@ -54,4 +54,4 @@ Any Language api can be used whether it is node for basic testing or an existing
 # Footer
     Footer represents different content of each of the navigation pages.
     It needs to properly find the location of the tab when clicking on sub sections of artelier studios for instance. Future v3
-    
+ 
