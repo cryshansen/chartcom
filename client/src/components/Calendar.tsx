@@ -49,9 +49,7 @@ const renderCalendarDays = () => {
 
   const nextMonth = currentMonth === 11 ? 0 : currentMonth + 1;
   const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
-
-  const isSameMonthAsToday = currentMonth === today.getMonth() && currentYear === today.getFullYear();
-
+  
   // ➤ PREVIOUS MONTH padding
   for (let i = startDay - 1; i >= 0; i--) {
     const day = prevMonthDays - i;
