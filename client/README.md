@@ -1,3 +1,4 @@
+
 # Client Vite React TypeScript Front End
 This React Client side package is intended to be a template of react website with navigation, forms, pages, dynamic data driven functions. 
 
