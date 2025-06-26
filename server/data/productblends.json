@@ -67,5 +67,68 @@
         "blending_categories": ["citrus"]
       }
     ]
+  },
+  {
+    "title": "Charcoal Soap",
+    "description": "A deep and gentle clean, use this clarifying charcoal facial soap.",
+    "price": "$8.00",
+    "imgSrc": "/images/apothecary/iain-robertson-G46PxOQSdnA-unsplash.jpg",
+    "category": "soaps",
+    "essential_oils": [
+      {
+        "name": "Rosewood",
+        "therapeutic_uses": ["antimicrobial", "balancing", "conditioning"],
+        "note": "top",
+        "blending_categories": ["rosy", "spicy, woody, citrus"]
+      },
+      {
+        "name": "Sandlewood",
+        "therapeutic_uses": ["headache relief", "digestion", "energy", "sinus relief"],
+        "note": "top",
+        "blending_categories": ["astringent", "herbaceous"]
+      }
+    ]
+  },
+  {
+    "title": "Coconut Milk Soap",
+    "description": "A deep and gentle clean, use this clarifying charcoal facial soap.",
+    "price": "$8.00",
+    "imgSrc": "/images/apothecary/louis-hansel-WUMxEBWvE64-unsplash.jpg",
+    "category": "soaps",
+    "essential_oils": [
+      {
+        "name": "Rosewood",
+        "therapeutic_uses": ["antimicrobial", "balancing", "conditioning"],
+        "note": "top",
+        "blending_categories": ["rosy", "spicy, woody, citrus"]
+      },
+      {
+        "name": "Sandlewood",
+        "therapeutic_uses": ["headache relief", "digestion", "energy", "sinus relief"],
+        "note": "top",
+        "blending_categories": ["astringent", "herbaceous"]
+      }
+    ]
+  },
+  {
+    "title": "Morocco Argan Serum",
+    "description": "Soothing, hydrating skin serum.",
+    "price": "$8.00",
+    "imgSrc": "/images/apothecary/hafida-abousalih-KYKjCEypbgc-unsplash.jpg",
+    "category": "serums",
+    "essential_oils": [
+      {
+        "name": "Rosewood",
+        "therapeutic_uses": ["antimicrobial", "balancing", "conditioning"],
+        "note": "top",
+        "blending_categories": ["rosy", "spicy, woody, citrus"]
+      },
+      {
+        "name": "Sandlewood",
+        "therapeutic_uses": ["headache relief", "digestion", "energy", "sinus relief"],
+        "note": "top",
+        "blending_categories": ["astringent", "herbaceous"]
+      }
+    ]
   }
 ]

@@ -62,15 +62,23 @@ const imageList = files
 
 
 app.get('/api/products', (req, res) => {
-  const filePath = path.join(__dirname, 'data', 'products.json');
-  fs.readFile(filePath, 'utf8', (err, data) => {
-    if (err) {
-      console.error('❌ Failed to read products.json', err);
-      return res.status(500).json({ error: 'Internal server error' });
-    }
+  const productPath = path.join(__dirname, 'data', 'products.json');
+  const blendPath = path.join(__dirname, 'data', 'productblends.json');
 
-    res.json(JSON.parse(data));
-  });
+  try {
+    const productsRaw = fs.readFileSync(productPath, 'utf8');
+    const blendsRaw = fs.readFileSync(blendPath, 'utf8');
+
+    const products = JSON.parse(productsRaw);
+    const blends = JSON.parse(blendsRaw);
+
+    const combined = [...blends, ...products];
+
+    res.json(combined);
+  } catch (err) {
+    console.error('❌ Failed to load product data:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 
