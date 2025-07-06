@@ -42,7 +42,7 @@ export default function ImageGrid({ category, filterLightOnly = false }: { categ
     })
     .catch((err) => console.error('❌ Failed to fetch images:', err))
     .finally(hideLoader);
-    
+
   }, [category, filterLightOnly]);
 
   return (
@@ -77,7 +77,10 @@ export default function ImageGrid({ category, filterLightOnly = false }: { categ
         <Lightbox
           open={index >= 0}
           close={() => setIndex(-1)}
-          slides={slides}
+          slides={slides.map(slide => ({
+            ...slide,
+            src: `${baseUrl}${slide.src}`
+          }))}
           index={index}
           plugins={[Captions]}
         />

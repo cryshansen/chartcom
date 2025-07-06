@@ -17,7 +17,7 @@ interface Workshop {
 }
 const Workshops = () =>{
 
-  const [loading, setLoading] = useState(true);
+  
   const [workshops, setWorkshops] = useState<Workshop[]>([]);
   const [filteredWorkshops, setFilteredWorkshops] = useState<Workshop[]>([]);
   const [themes, setThemes] = useState<string[]>([]);
@@ -57,8 +57,6 @@ const Workshops = () =>{
        .finally( hideLoader);
   }, []);
 
-
-  if (loading) return <p className="text-center my-5">Loading workshops...</p>;
 
     return(
             <>
