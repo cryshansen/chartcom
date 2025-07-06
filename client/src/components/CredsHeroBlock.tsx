@@ -1,9 +1,9 @@
-export default function ArtfolioHeroBlock(){
-    const baseUrl = import.meta.env.VITE_API_URL; /** underlined but must install  */
+export default function CredsHeroBlock(){
+   const baseUrl = import.meta.env.VITE_API_URL; /** underlined but must install  */
     return (
             <section className="hero-section d-flex align-items-center justify-content-center text-white text-start"
                 style={{
-                  backgroundImage: `url("${baseUrl}/images/europeana-KBnfo0ZMQVs-unsplash.jpg")`,
+                  backgroundImage: `url("${baseUrl}/images/pang-yuhao-_kd5cxwZOK4-unsplash.jpg")`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   height: '500px',
@@ -12,8 +12,8 @@ export default function ArtfolioHeroBlock(){
               >
                 <div className="row">
                   <div className="textarea_block col-md-6">
-                     <h1 className="display-4 text-start">The Modern Artfolio</h1>
-                    <p className="lead">Meanderings of a photographer's eyes. </p>
+                     <h1 className="display-4 text-start">The Modern Credential</h1>
+                    <p className="lead">Educational and Driven Pursuits. </p>
                   </div>
                 </div>
                

@@ -33,7 +33,7 @@ export default function ArtelierCarousel() {
             <h2>White Room</h2>
             <p>Current works in the white room consist of headpiece work and bench light workshops.</p>
             <div className="link_button_wrap">
-              <a className="link_button" href="/studio1-gallery">Visit White</a>
+              <a className="link_button" href="/studios/1">Visit White</a>
             </div>
           </div>
         )
@@ -49,7 +49,7 @@ export default function ArtelierCarousel() {
               clever room with hidden compartments and rabbit heads. Time is of the essence — let’s make cake.
             </p>
             <div className="link_button_wrap">
-              <a className="link_button" href="/static_gallery.html">Visit Make Believe</a>
+              <a className="link_button" href="/studios/3">Visit Make Believe</a>
             </div>
           </div>
         )

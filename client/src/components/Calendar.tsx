@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLoading } from "../context/LoadingContext";
 import "./calendar.css";
 
 export default function Calendar() {
@@ -8,7 +9,7 @@ export default function Calendar() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [bookedDates, setBookedDates] = useState<{ [key: string]: number }>({});
-
+  const { showLoader, hideLoader } = useLoading();
 
   const months = [
     "January", "February", "March", "April", "May", "June",
@@ -19,10 +20,16 @@ export default function Calendar() {
     useEffect(() => {
       const year = currentYear;
       const month = currentMonth + 1; // JS is 0-based
-
-      fetch(`/api/bookings/month?year=${year}&month=${month}`)
+/**
+ * NODE:  fetch(`/api/bookings/month?year=${year}&month=${month}`)
+ * PHP see readme link to github for package
+ */
+      showLoader();
+      fetch(`https://crystalhansenartographic.com/api/index-booking.php/booking/month?year=${year}&month=${month}`)
         .then(res => res.json())
-        .then(data => setBookedDates(data));
+        .then(data => setBookedDates(data))
+        .catch((err) => console.error('Failed to fetch bookings:', err))
+        .finally(hideLoader);
     }, [currentMonth, currentYear]);
 
 

@@ -1,7 +1,7 @@
 # chartcom
 React TypeScript  Vite website system, coupled with a node.js server back end. Dynamic data based on images and json files to load. Can be coupled with a database backend. 
 
-This simple site uses contact modal for all page engagement outside of the footer newsletter and the apothecary newsletter components. 
+This simple site uses contact modal for all page form engagement outside of the footer newsletter and the apothecary newsletter components. 
 
 The site is intended to be used as a template to start with a basic niche market and showcase a sales front via the apothecary page. 
 
@@ -63,17 +63,26 @@ install ImageMagick to run against photos to resize for website and placements.
 navigate to the image folder and run
 mkdir 576_clean
 
-/* uses ImageMagick installation to manage image sizing */
+/*uses ImageMagick installation to manage image sizing*/
 mogrify -path 576_clean -resize 576x576 -format jpg *.jpg
 
 # Dependencies
 
 
 npm install --save-dev nodemon  /*allows rebuild as change files*/
-npm install express image-size /* allows to manage sizing images or reading image size tbd*/
+npm install express image-size /*allows to manage sizing images or reading image size tbd*/
 
 npm install cors
 npm install node-cron
+
+/**SEO Head manager requires React 18 built upon 19 so downgrade environment if you have issues. npm install react@18 react-dom@18*/
+/*npm install react-router-dom@6.17.0*/
+npm install react-helmet 
+npm uninstall react-helmet React 18 is no longer maintained but running on a node environment forcing React 18 
+npm install react-helmet-async /*fix*/
+
+
+
 
 # Cron Job creates a booking.json per day at 00:01AM
 The cron is required for the fakeStudioBookings.js file that generates dates for demo in the calendar. It can be changed to hook to a database instead. this is for breavity. 

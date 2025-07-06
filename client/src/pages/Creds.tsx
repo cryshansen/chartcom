@@ -4,10 +4,27 @@ import Awards from '../components/Awards'
 import Education from '../components/Education' 
 import Acolades from '../components/Acolades' 
 import Pursuits from '../components/Pursuits' 
-
+import CredsHeroBlock from '../components/CredsHeroBlock'
+import { Helmet } from 'react-helmet-async';
 
  const Creds = () => (
+        <>
+        <Helmet>
+                <title>Credentials | Crystal Hansen | Artographic</title>
+                <meta name="description" content="Explore the creative adventures in Full Stack coding and Phtographic topics by Crystal Hansen." />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Crystal Hansen – Full-Stack Developer" />
+                <meta property="og:description" content="Full-stack developer with experience in React, TypeScript,  Java and PHP developer specializing in backend systems, API integrations, and technical web applications." />
+                <meta property="og:image" content="images/signature2_sized_490.png" /> 
+                <meta property="og:url" content="https://crystalhansenartographic.com" />
+                <meta property="og:site_name" content="Crystal Hansen Portfolio" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Crystal Hansen – Full-Stack Developer" />
+                <meta name="twitter:description" content="Explore technical projects in React, TypeScript, Java, PHP, OpenAI APIs, and backend logic, systems, API integrations, and technical web applications." />
+                <meta name="twitter:image" content="images/signature2_sized_490.png" /> 
+        </Helmet>
          <section className="fluid-container py-5 mb-5">
+                <CredsHeroBlock />
                 <h2 className="text-center mt-5 mb-5"> 📜  creds</h2>
                 <section className="container border-top text-start py-5 mb-5">
                         <p>Its impolite to age ourselves. Growing up in Ontario where lakes are blue and sand is pale cream, impressions of color influence has had a natural migration to Cerulean blue vs prairie skies.</p>
@@ -81,6 +98,7 @@ import Pursuits from '../components/Pursuits'
                 <Pursuits />
 
          </section>
+         </>
         );
         
 export default Creds;

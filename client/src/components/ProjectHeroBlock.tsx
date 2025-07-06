@@ -1,8 +1,9 @@
 export default function ProjectHeroBlock(){
+   const baseUrl = import.meta.env.VITE_API_URL;
     return (
             <section className="hero-section d-flex align-items-center justify-content-center text-white text-center"
                 style={{
-                  backgroundImage: "url('/images/brands-people-Ax8IA8GAjVg-unsplash.jpg')",
+                  backgroundImage: `url('${baseUrl}/images/brands-people-Ax8IA8GAjVg-unsplash.jpg')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   height: '500px',

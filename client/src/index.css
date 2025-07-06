@@ -153,6 +153,15 @@ button:focus-visible {
     background-color: #4d4d4d;
     border-color: #363636;
 }
+/**
+* 
+* artelier carousel studio links. 
+*/
+.link_button{
+  color:#FFF;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

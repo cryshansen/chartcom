@@ -1,10 +1,12 @@
+ import { Link } from 'react-router-dom';
  export default function CurrentProjectsBlock() {
 
     return (
           <div className="container mb-5 mt-5  ">
             <h2 className="pb-2 border-bottom text-start">Current Projects</h2>
             <div className="text-end">
-              <a href="#/projects">more projects</a>
+              <Link to="/projects">more projects</Link>
+              
             </div>
             <div className="row align-items-center g-lg-5 py-5">
               <div className="col-lg-7 text-center text-lg-start">

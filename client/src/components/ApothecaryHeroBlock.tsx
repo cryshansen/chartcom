@@ -1,8 +1,9 @@
 export default function ApothecaryHeroBlock(){
+    const baseUrl = import.meta.env.VITE_API_URL; /** underlined but must install  */
     return (
             <section className="hero-section d-flex align-items-center justify-content-center text-white text-center"
                 style={{
-                  backgroundImage: "url('/images/artelier_slider/eye_glass2_1024.jpg')",
+                  backgroundImage: `url("${baseUrl}/images/artelier_slider/eye_glass2_1024.jpg")`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   height: '500px',

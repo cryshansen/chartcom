@@ -1,8 +1,8 @@
 // useCaptcha.tsx
 import { useRef, useState, useEffect } from "react";
-
-const SITE_KEY_DEV = "6LcOrmYrAAAAAHM-e_YY8-jxilGfSnbtqiJphLk8";
-
+/** note navigate to the recaptcha site for the right key to the right environment Below is production crystalhansenartographicCOM */
+const SITE_KEY_DEV = "6LcyqIcaAAAAANohSerPkxKeT2KgvseGpudPhFPi";
+/** local host has 2 in my account tbd */
 declare global {
   interface Window {
     grecaptcha?: {

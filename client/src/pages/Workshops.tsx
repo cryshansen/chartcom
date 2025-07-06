@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import WorkshopHeroBlock from "../components/WorkshopHeroBlock";
 import  WorkshopFeatureCardGrid from "../components/WorkshopFeatureCardGrid";
 import WorkshopCardGrid from '../components/WorkshopCardGrid';
-
+import { Helmet } from 'react-helmet-async';
+import { useLoading } from "../context/LoadingContext";
       
 interface Workshop {
   id: number;
@@ -24,34 +25,36 @@ const Workshops = () =>{
   /* deprecated moved to WorkshopFeatureCardGrid 
   const [featured, setFeatured] = useState<Workshop[]>([]);
   */
+  const { showLoader, hideLoader } = useLoading();
 
   const handleFilter = (theme: string) => {
-    setActiveTheme(theme);
-    if (theme === 'All') {
-      setFilteredWorkshops(workshops);
-    } else {
-      setFilteredWorkshops(workshops.filter(w => w.theme === theme));
-    }
+      setActiveTheme(theme);
+      if (theme === 'All') {
+        setFilteredWorkshops(workshops);
+      } else {
+        setFilteredWorkshops(workshops.filter(w => w.theme === theme));
+      }
   };
-
+/**
+ * NODE:     fetch('/api/workshops')
+ * PHP see link to github in readme for the php package
+ */
   useEffect(() => {
-    fetch('/api/workshops')
+    showLoader();
+
+    fetch('https://crystalhansenartographic.com/api/index-workshop.php/workshop/list')
       .then(res => res.json())
       .then(data => {
         setWorkshops(data);
         setFilteredWorkshops(data);
         const uniqueThemes: string[] = Array.from(new Set(data.map((w: Workshop) => w.theme)));
         setThemes(uniqueThemes);
-        /* deprecated moved to WorkshopFeatureCardGrid
-          const featuredItems = data.filter((w: Workshop) => w.featured);
-          setFeatured(featuredItems);
-         */
-        setLoading(false);
       })
       .catch(err => {
         console.error("Failed to load workshops", err);
-        setLoading(false);
-      });
+        
+      })
+       .finally( hideLoader);
   }, []);
 
 
@@ -59,6 +62,21 @@ const Workshops = () =>{
 
     return(
             <>
+            <Helmet>
+              <title>Crystal Hansen | Artographic</title>
+              <meta name="description" content="Explore the creative adventures in Full Stack coding and Phtographic topics by Crystal Hansen." />
+              <meta property="og:type" content="website" />
+              <meta property="og:title" content="Crystal Hansen – Full-Stack Developer" />
+              <meta property="og:description" content="Full-stack developer with experience in React, TypeScript,  Java and PHP developer specializing in backend systems, API integrations, and technical web applications." />
+              <meta property="og:image" content="images/signature2_sized_490.png" /> 
+              <meta property="og:url" content="https://crystalhansenartographic.com" />
+              <meta property="og:site_name" content="Crystal Hansen Portfolio" />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="Crystal Hansen – Full-Stack Developer" />
+              <meta name="twitter:description" content="Explore technical projects in React, TypeScript, Java, PHP, OpenAI APIs, and backend logic, systems, API integrations, and technical web applications." />
+              <meta name="twitter:image" content="images/signature2_sized_490.png" /> 
+            
+           </Helmet>
             <WorkshopHeroBlock />
             <WorkshopFeatureCardGrid />
 

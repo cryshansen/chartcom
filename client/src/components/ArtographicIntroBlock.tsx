@@ -1,9 +1,10 @@
+ import { Link } from 'react-router-dom';
+
 export default function ArtographicIntroBlock(){
     return(
             <div className="container mt-5 px-4 py-5" id="featured-3">
             <h2 className="pb-2 border-bottom">Crystal Hansen Artographic</h2>
-                `<div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
-            
+                <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 {/* Left Column */}
                 <div className="feature col">
                     <div className="page_feature_image_block_left">
@@ -14,12 +15,12 @@ export default function ArtographicIntroBlock(){
                     <p>
                         Thank you for taking the time to check out my online studio – take a look around and stay awhile!
                     </p>
-                    <a href="/artelier" className="icon-link">
+                    <Link to="/artelier" className="icon-link">
                         online studio
                         <svg className="bi" aria-hidden="true">
                         <use xlinkHref="#chevron-right" />
                         </svg>
-                    </a>
+                    </Link>
                     </div>
                 </div>
             
@@ -44,12 +45,12 @@ export default function ArtographicIntroBlock(){
                     <p>
                         Artographic became a term used to identify my skill sets. Fine Art, Graphic Design, and Photographic processes that transform the abstract thought into its visualization.
                     </p>
-                    <a href="/about" className="icon-link">
+                    <Link to="/about" className="icon-link">
                         Visualize
                         <svg className="bi" aria-hidden="true">
                         <use xlinkHref="#chevron-right" />
                         </svg>
-                    </a>
+                    </Link>
                     </div>
                 </div>
                 </div>

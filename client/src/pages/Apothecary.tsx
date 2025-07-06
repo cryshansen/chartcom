@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard";
 import Philosophy from "../components/Philosophy"
 import ProductGallery from "../components/ProductGallery";
 import NewsletterRemedies from "../components/NewsletterRemediesBlock"
-
+import { Helmet } from 'react-helmet-async';
 
 const products = [
   {
@@ -28,13 +28,23 @@ const products = [
     category: "oils",
   },
 ];
-//Photo by <a href="https://unsplash.com/@shadrinaphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tetiana Shadrina</a> on <a href="https://unsplash.com/photos/assorted-flowers-in-brown-wicker-basket-SWW6BAASQH4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@yoiain?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Iain Robertson</a> on <a href="https://unsplash.com/photos/a-bunch-of-green-leaves-on-a-white-surface-G46PxOQSdnA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-           
-//Photo by <a href="https://unsplash.com/@diana_pole?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Diana Polekhina</a> on <a href="https://unsplash.com/photos/green-plant-in-close-up-photography-Hzz7AEyLhZk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
 const Apothecary = () => (
     <>
+    <Helmet>
+        <title>Apothecary | Crystal Hansen | Artographic</title>
+        <meta name="description" content="Explore the creative process of earths finest gifts to renew, nourish and focus applications of fine essential oils and their topical benefits by Crystal Hansen." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Crystal Hansen – Full-Stack Developer" />
+        <meta property="og:description" content="Full-stack developer with experience in React, TypeScript,  Java and PHP developer specializing in backend systems, API integrations, and technical web applications." />
+        <meta property="og:image" content="images/signature2_sized_490.png" /> 
+        <meta property="og:url" content="https://crystalhansenartographic.com" />
+        <meta property="og:site_name" content="Crystal Hansen Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Crystal Hansen – Full-Stack Developer" />
+        <meta name="twitter:description" content="Explore technical projects in React, TypeScript, Java, PHP, OpenAI APIs, and backend logic, systems, API integrations, and technical web applications." />
+        <meta name="twitter:image" content="images/signature2_sized_490.png" /> 
+    </Helmet>
     <ApothecaryHeroBlock />
 
     <h2 className="text-center my-5">Featured Remedies</h2>
