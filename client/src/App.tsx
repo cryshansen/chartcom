@@ -20,7 +20,9 @@ import MasonryLayout from './pages/MasonLayout'
 
 import Workshops from './pages/Workshops';
 import NotFound from './pages/NotFound';
+
 import { useLoading } from "./context/LoadingContext";
+import ScrollToTop from './components/ScrollToTop';
 
 
  
@@ -37,6 +39,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop /> {/* 👈 Add this just once here */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

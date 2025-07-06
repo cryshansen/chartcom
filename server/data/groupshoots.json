@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "theme": "Lavendar Fields",
+    "category": "Photography",
+    "title": "Lavendar Fields",
+    "subtitle": "Explore native grown Lavendar fields in Quebec Canada ",
+    "date": "2025-06-01",
+    "description": "Experience the outdoors in native settings of fleural and herbal harvesting",
+    "image" : "/images/studio1/daniele-levis-pelusi-rbz9fyM7C44-unsplash.jpg",
+    "buttonLabel" : "Join Today!",
+    "featured":true
+  },
+  {
+    "id": 2,
+    "theme": "Tulip Festival",
+    "category": "Photography",
+    "title": "Tulips of color",
+    "subtitle": "Enjoy a day of color and explorations",
+    "date": "2025-06-03",
+    "description": "Focus on the Flowers as a celebration of spring in Ottawa",
+    "image" : "/images/studio1/nadi-spasibenko-VXQvz1t7uHk-unsplash.jpg",
+    "buttonLabel" : "Reserve Spot!",
+    "featured":false
+  },
+  {
+    "id": 3,
+    "theme": "Holii Color Me",
+    "category": "Photography",
+    "title": "Holii Color Me",
+    "subtitle": "Study People and their moments",
+    "date": "2025-08-05",
+    "description": "Interweave ourselves in the festival of colours and practise people watching",
+    "image":"/images/studio1/yue-ma-Dw46btG90Xg-unsplash.jpg",
+    "buttonLabel" : "Book Seat!",
+    "featured":true
+  },
+  {
+    "id": 4,
+    "theme": "HotAir Baloons",
+    "category": "Painting",
+    "title": "Hot Air Baloons",
+    "subtitle": "Hot Air color the sky",
+    "date": "2025-06-07",
+    "description": "Take a tour of to local town where we watch the talent raise their baloons.",
+    "image":"/images/studio1/nadir-syzygy--WUhp-1aabo-unsplash.jpg",
+        "buttonLabel" : "Learn More!",
+    "featured":true
+  },
+  {
+    "id": 5,
+    "theme": "Cuban Carnival",
+    "category": "Photography",
+    "title": "Cuban Carnival",
+    "subtitle": "Cuban Carnival",
+    "date": "2025-06-09",
+    "description": "Cuban Carnival",
+    "image":"/images/studio1/karen-bullaro-KU_6agYOPzQ-unsplash.jpg",
+    "buttonLabel" : "Register Now!",
+    "featured":false
+  }
+]

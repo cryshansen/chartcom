@@ -4,6 +4,7 @@ import StudioCollabBlock from '../components/StudioCollabBlock'
 import Studios from "../components/Studios"
 import { Helmet } from 'react-helmet-async';
 
+import GroupShootsFeatureCardGrid from '../components/GroupShootsFeatureCardGrid';
 /**
  * TODO: get the galleries to show in this page somehow figure out how to convert the galleries from pages to gallery components. then tie into here.
 */
@@ -35,6 +36,7 @@ export default function Artelier() {
             <WorkshopFeatureCardGrid />
             <StudioCollabBlock /> 
             <Studios />
+            <GroupShootsFeatureCardGrid />
           </section>
       </>
         );

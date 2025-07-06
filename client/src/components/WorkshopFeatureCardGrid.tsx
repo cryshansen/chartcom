@@ -35,7 +35,7 @@ export default function  WorkshopFeatureCardGrid() {
   return (
     <div className="container py-5">
       <h2 className="text-center mb-4">✨ Featured Workshops</h2>
-      <div className="row g-4">
+      <div className="row g-4" id="workshops">
         {featured.map(workshop => (
           <div className="col-md-6 col-lg-4" key={workshop.id}>
             <div className="card h-100 shadow-sm">
