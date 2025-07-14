@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Studio B - Natural Light",
+    "description": "A bright, minimal space perfect for portrait, editorial, or lifestyle photography.",
+    "body": "Natural light pours in all day. Features white cyc walls and modular props.",
+    "price": 120,
+    "images": [
+      "/images/studio1/576/liana-mikah-HstwCJX0jT4-unsplash.jpg",
+      "/images/studio1/576/daniele-levis-pelusi-rbz9fyM7C44-unsplash.jpg",
+      "/images/studio1/576/liana-mikah-HstwCJX0jT4-unsplash.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Studio C- Creative Make Believe",
+    "description": "A dreamy, styled set for whimsical shoots and brand storytelling.",
+    "body": "Hand-painted sets, props, and lighting design tailored to mood boards.",
+    "price": 150,
+    "images": [
+      "/images/studio3/576/129A9196.JPG", 
+      "/images/studio3/576/129A9163.JPG",
+      "/images/studio3/576/129A9219.JPG"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Studio A - Portrait Room",
+    "description": "We build your set for you — custom and flexible creative options.",
+    "body": "Bring your concept and let us build it — from green screen to editorial sets.",
+    "price": 130,
+    "images": [
+      "/images/studio2/576/guilherme-stecanella-lBnSmDYGxvs-unsplash.jpg",
+      "/images/studio2/576/clay-banks-qdavoiFWGQc-unsplash.jpg",
+      "/images/studio2/576/samantha-gades-BlIhVfXbi9s-unsplash.jpg"
+    ]
+  }
+]

@@ -1,8 +1,19 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Prevent React Router from hijacking /studio-booker paths
+  RewriteCond %{REQUEST_URI} ^/studio-booker/
+  RewriteRule ^ - [L]
+
   RewriteBase /
+
+  # Don’t rewrite if requesting index.html explicitly
   RewriteRule ^index\.html$ - [L]
+
+  # Don’t rewrite real files or folders
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Rewrite everything else to index.html (React entry point)
   RewriteRule . /index.html [L]
 </IfModule>
